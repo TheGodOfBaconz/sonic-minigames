@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ring Rush — QuillDash</title>
+<meta name="description" content="A Sonic-style ring clicker fan game.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="clicker.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="../../index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="16" cy="16" r="14" fill="#3E64FF"/>
+        <path d="M16 4 L19 12 L16 10 L13 12 Z" fill="#FF6B4A"/>
+      </svg>
+      QuillDash
+    </a>
+    <ul class="nav-links">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../games.html" aria-current="page">Games</a></li>
+      <li><a href="../../index.html#crew">The Crew</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="clicker-page">
+  <div class="wrap clicker-wrap">
+
+    <div class="clicker-main">
+      <h1>Ring Rush</h1>
+      <p class="lead">Tap the ring. Recruit the crew. Watch the count climb.</p>
+
+      <div class="ring-count">
+        <span id="ringTotal">0</span>
+        <span class="ring-label">rings</span>
+      </div>
+      <div class="rps" id="ringsPerSec">0 rings/sec</div>
+
+      <button id="clickTarget" class="click-target" aria-label="Click to collect a ring">
+        <svg viewBox="0 0 100 100" width="180" height="180">
+          <circle cx="50" cy="50" r="42" fill="none" stroke="#FFD23F" stroke-width="10"/>
+        </svg>
+      </button>
+
+      <div class="click-power">+<span id="clickPowerVal">1</span> per click</div>
+
+      <button id="resetBtn" class="btn btn-ghost reset-btn">Reset progress</button>
+    </div>
+
+    <aside class="shop">
+      <h2>Recruit the crew</h2>
+      <p class="shop-sub">Each recruit keeps working for you, even while you're away.</p>
+      <div id="shopList" class="shop-list"></div>
+    </aside>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>QuillDash — an unofficial fan page. Sonic the Hedgehog and related characters are property of SEGA.</span>
+    <span>Progress saves automatically in your browser.</span>
+  </div>
+</footer>
+
+<script src="clicker.js"></script>
+</body>
+</html>
